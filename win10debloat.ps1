@@ -31,10 +31,19 @@ $tweaks = @(
 
 	### External Program Setup
 	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
-	"InstallAdobe",
+	"InstallSumatraPDF",
 	"Install7Zip",
 	"InstallNotepadplusplus",
-	"InstallMediaPlayerClassic",
+	"InstallVLC",
+	"InstallFireFox",
+	"InstallNETFramework",
+	"InstallLibreOffice",
+	"InstallPaint.Net",
+	"InstallThunderbird",
+	"InstallIrfanview",
+	"InstallAutohotkey",
+	"InstallSteam",
+	"InstallQbittorrent",
 
 	### Windows Apps
 	"DebloatAll",
@@ -109,20 +118,20 @@ $tweaks = @(
 	"ShowTaskManagerDetails"        # "HideTaskManagerDetails",
 	"ShowFileOperationsDetails",    # "HideFileOperationsDetails",
 	"DisableFileDeleteConfirm",	# "EnableFileDeleteConfirm",    
-	#"HideTaskbarSearch",
+	"HideTaskbarSearch",
 	"ShowTaskbarSearchIcon",      # "ShowTaskbarSearchBox",
 	"HideTaskView",                 # "ShowTaskView",
-	# "ShowSmallTaskbarIcons",        # "ShowLargeTaskbarIcons",
-	# "SetTaskbarCombineWhenFull",    # "SetTaskbarCombineNever",     # "SetTaskbarCombineAlways",
-	# "HideTaskbarPeopleIcon",        # "ShowTaskbarPeopleIcon",
-	"ShowTrayIcons",                # "HideTrayIcons",
+	"ShowSmallTaskbarIcons",        # "ShowLargeTaskbarIcons",
+	"SetTaskbarCombineNever",     # "SetTaskbarCombineAlways", # "SetTaskbarCombineWhenFull"
+	"HideTaskbarPeopleIcon",        # "ShowTaskbarPeopleIcon",
+	"HideTrayIcons"	,		#"ShowTrayIcons",                ,
 	"DisableSearchAppInStore",      # "EnableSearchAppInStore",
 	"DisableNewAppPrompt",          # "EnableNewAppPrompt",
 	# "SetControlPanelSmallIcons",  # "SetControlPanelLargeIcons",  # "SetControlPanelCategories",
 	# "SetVisualFXPerformance",     # "SetVisualFXAppearance",
-	# "AddENKeyboard",              # "RemoveENKeyboard",
+	"RemoveENKeyboard",             # "AddENKeyboard",
 	"EnableNumlock",             	# "DisableNumlock",
-	"EnableDarkMode",				# "DisableDarkMode",
+	"EnableDarkMode",		# "DisableDarkMode",
 	"Stop-EdgePDF",
 
 	### Explorer UI Tweaks ###
@@ -156,9 +165,9 @@ $tweaks = @(
 	"UninstallMsftBloat",           # "InstallMsftBloat",
 	"UninstallThirdPartyBloat",     # "InstallThirdPartyBloat",
 	# "UninstallWindowsStore",      # "InstallWindowsStore",
-	# "DisableXboxFeatures",          # "EnableXboxFeatures",
-	"DisableAdobeFlash",            # "EnableAdobeFlash",
-	"InstallMediaPlayer", 		# "UninstallMediaPlayer",
+	# "DisableXboxFeatures",         # "EnableXboxFeatures",
+	"DisableAdobeFlash", 		# "EnableAdobeFlash",
+	"UninstallMediaPlayer", 	# "InstallMediaPlayer",
 	"UninstallInternetExplorer",  # "InstallInternetExplorer",
 	"UninstallWorkFolders",       # "InstallWorkFolders",
 	"InstallLinuxSubsystem",      # "UninstallLinuxSubsystem",
@@ -201,9 +210,9 @@ Function InstallTitusProgs {
 	./OOSU10.exe ooshutup10.cfg /quiet
 }
 
-Function InstallAdobe {
-	Write-Output "Installing Adobe Acrobat Reader"
-	choco install adobereader -y
+Function InstallSumatraPDF {
+	Write-Output "Installing Sumatra PDF"
+	choco install sumatrapdf.install -y
 }
 
 Function InstallJava {
@@ -221,9 +230,54 @@ Function InstallNotepadplusplus {
 	choco install notepadplusplus -y
 }
 
-Function InstallMediaPlayerClassic {
-	Write-Output "Installing Media Player Classic (VLC Alternative)"
-	choco install mpc-hc -y
+Function InstallVLC {
+	Write-Output "Installing VLC"
+	choco install vlc -y
+}
+
+Function InstallFirefox {
+	Write-Output "Installing Firefox"
+	choco install firefox -y
+}
+
+Function Install NETFramework {
+	Write-Output "Installing NETFramework"
+	choco install dotnetfx -y	
+}
+
+Function Install LibreOffice {
+	Write-Output "Installing LibreOffice"
+	choco install libreoffice-fresh -y
+}
+
+Function Install Paint.Net {
+	Write-Output "Installing Paint.Net"
+	choco install paint.net -y
+}
+
+Function Install Thunderbird {
+	Write-Output "Installing Thunderbird"
+	choco install thunderbird -y
+}
+
+Function Install IrfanView {
+	Write-Output "Installing Irfanview"
+	choco install irfanview -y
+}
+
+Function Install AutoHotkey {
+	Write-Output "Installing AutoHotkey"
+	choco install autohotkey.install -y
+}
+
+Function Install Steam {
+	Write-Output "Installing Steam"
+	choco install steam -y
+}
+
+Function Install QBittorrent {
+	Write-Output "Installing QBittorrent"
+	choco install qbittorrent -y
 }
 
 ##########
